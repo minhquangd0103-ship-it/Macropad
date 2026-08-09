@@ -5,14 +5,15 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
-       KC_UP,   KC_SPACE,   KC_UP
+        KC_UP, KC_SPACE, KC_UP
     )
 };
+
 #ifdef OLED_ENABLE
 
- bool oled_task_user(void) (
+bool oled_task_user(void) {
     oled_write_P(PSTR("Jump"), false);
     return false;
- )
+}
 
- #endif
+#endif
